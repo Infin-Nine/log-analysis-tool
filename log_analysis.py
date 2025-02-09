@@ -56,3 +56,6 @@ except FileNotFoundError:
 
 except KeyboardInterrupt:
     print("\nExiting... 🚪")
+
+except OSError as e:
+    print("Do Not Use Qotes In File Path", e)
