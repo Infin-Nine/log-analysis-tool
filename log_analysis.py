@@ -11,7 +11,7 @@ def log_analysis(log_file):
     
     suspicious_logs = []  # ✅ Empty list to store logs
 
-    with open(log_file, "r") as file:
+    with open(log_file, "r", encoding="utf-8") as file:
         for line in file:  # ✅ Memory efficient reading
             if any(re.search(pattern, line, re.IGNORECASE) for pattern in suspicious_patterns):
                 suspicious_logs.append(line.strip())  # ✅ `.strip()` remove extra spaces
@@ -21,7 +21,7 @@ def log_analysis(log_file):
 def ip_check(log_file):
     ip_counter = defaultdict(int)  # ✅ Default value 0
 
-    with open(log_file, "r") as file:
+    with open(log_file, "r", encoding="utf-8") as file:
         for line in file:
             if "Failed login" in line or "Unauthorized access" in line:
                 ip_match = re.search(r"\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b", line)
