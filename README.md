@@ -13,3 +13,7 @@
    ```bash
    git clone https://github.com/Infin-Nine/log-analysis-tool
    cd log-analysis-tool
+
+📷 Screenshot
+![Screenshot 2025-02-09 105417](https://github.com/user-attachments/assets/2e4f53b6-2b0a-450c-b4a6-976949f267b9)
+
